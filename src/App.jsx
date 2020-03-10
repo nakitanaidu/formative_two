@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div>Hello</div>
+        <div>Hello from nikits</div>
       </React.Fragment>
     );
   }
