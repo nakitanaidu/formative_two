@@ -27,8 +27,8 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li>
-            <Link style={LinkStyle} to="/addcandidates">
-              Add Candidates
+            <Link style={LinkStyle} to="/addcandidate">
+              Add Candidate
             </Link>
           </li>
         </ul>
