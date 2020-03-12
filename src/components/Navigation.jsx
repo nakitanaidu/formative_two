@@ -22,13 +22,13 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li>
-            <Link style={LinkStyle} to="/viewcandidates">
-              View Candidates
+            <Link style={LinkStyle} to="/viewevents">
+              View Events
             </Link>
           </li>
           <li>
-            <Link style={LinkStyle} to="/addcandidate">
-              Add Candidate
+            <Link style={LinkStyle} to="/addevent">
+              Add Event
             </Link>
           </li>
         </ul>

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
-import ViewCandidates from "./components/ViewCandidates";
-import AddCandidate from "./components/AddCandidate";
+import ViewEvents from "./components/ViewEvents";
+import AddEvents from "./components/AddEvent";
+import EditEvent from "./components/EditEvent";
 export default class App extends Component {
   render() {
     return (
@@ -11,8 +12,9 @@ export default class App extends Component {
         <Navigation />
         <Router>
           <Home path="/" />
-          <ViewCandidates path="/viewcandidates" />
-          <AddCandidate path="/addcandidate" />
+          <ViewEvents path="/viewevents" />
+          <AddEvents path="/addevent" />
+          <EditEvent path="/edit/:artworkId" />
         </Router>
         
       </React.Fragment>
