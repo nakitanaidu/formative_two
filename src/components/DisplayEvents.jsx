@@ -32,14 +32,14 @@ export default class DisplayEvent extends Component {
         <a href={this.props.url} target="_blank" rel="noopener noreferrer">
           Link
         </a>
-
+        <br/>
         <button
-        className="add-button"
-        data-uuid={this.props.uuid}
-        onClick={this.updatePerson}
-      >
-        Edit
-      </button>
+          className="add-button"
+          data-uuid={this.props.uuid}
+          onClick={this.updatePerson}
+        >
+          Edit
+        </button>
 
         <div>
           <button data-uuid={this.props.uuid} onClick={this.removeEvent}>

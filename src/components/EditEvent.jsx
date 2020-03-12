@@ -10,8 +10,8 @@ export default class EditEvent extends Component {
     this.myRef = React.createRef();
   }
 
-  goHome = e => {
-    navigate(`/`);
+  goEvent = e => {
+    navigate(`/viewevents`);
   };
 
   componentDidMount() {
@@ -64,7 +64,7 @@ export default class EditEvent extends Component {
           </button>
         </form>
 
-        <button className="add-button" onClick={this.goHome}>
+        <button className="add-button" onClick={this.goEvent}>
           Return Home
         </button>
         <p>{this.props.myid}</p>
