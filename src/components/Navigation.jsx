@@ -1,33 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-
-const menuStyle = {
-  display: "flex",
-  width: "80vw",
-  justifyContent: "space-between",
-  alignItems: "center",
-  listStyleType: "none"
-};
-
-const LinkStyle = { color: "#4caf50" };
+import "bootstrap/dist/css/bootstrap.css";
 
 export default class Navigation extends Component {
   render() {
     return (
-      <nav>
-        <ul style={menuStyle}>
-          <li>
-            <Link style={LinkStyle} to="/">
+      <nav className="nav-container ">
+        <ul className="nav justify-content-center">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
               Home
             </Link>
           </li>
-          <li>
-            <Link style={LinkStyle} to="/viewevents">
+          <li className="nav-item">
+            <Link to="/viewevents" className="nav-link">
               View Events
             </Link>
           </li>
-          <li>
-            <Link style={LinkStyle} to="/addevent">
+          <li className="nav-item">
+            <Link to="/addevent" className="nav-link">
               Add Event
             </Link>
           </li>

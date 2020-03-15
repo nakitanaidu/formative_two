@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { navigate } from "@reach/router";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default class EditEvent extends Component {
   updateEvent = evt => {
@@ -14,7 +15,7 @@ export default class EditEvent extends Component {
   render() {
     return (
       <button
-        className="add-button"
+        className="add-button btn btn-outline-primary m-2"
         data-uuid={this.props.event_id}
         onClick={this.updateEvent}
       >

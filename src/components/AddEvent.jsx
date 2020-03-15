@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { navigate } from "@reach/router";
 import Axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default class AddEvent extends Component {
   gotoEvents = e => {
@@ -30,33 +31,66 @@ export default class AddEvent extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="form-wrapper">
-          <form onSubmit={this.addEvent}>
+        <form onSubmit={this.addEvent} className="add-event-container">
+          <div className="form-group">
             <label htmlFor="name">Event name:</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              className="form-control"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div className="form-group">
             <label htmlFor="imageUrl">Event imageUrl :</label>
-            <input type="text" id="imageUrl" name="imageUrl" required />
+            <input
+              className="form-control"
+              type="text"
+              id="imageUrl"
+              name="imageUrl"
+              required
+            />
+          </div>
+
+          <div className="form-group">
             <label htmlFor="author">Author:</label>
-            <input type="text" id="author" name="author" required />
+            <input
+              className="form-control"
+              type="text"
+              id="author"
+              name="author"
+              required
+            />
+          </div>
 
+          <div className="form-group">
             <label htmlFor="url">Url:</label>
-            <input type="text" id="url" name="url" required />
-            <br />
+            <input
+              className="form-control"
+              type="text"
+              id="url"
+              name="url"
+              required
+            />
+          </div>
 
-            <div className="add-button-wrapper">
-              <button type="submit" className="add-button">
-                Add Event{" "}
-              </button>
-              <button
-                type="button"
-                className="add-button"
-                onClick={this.gotoEvents}
-              >
-                Back to the list
-              </button>
-            </div>
-          </form>
-        </div>
+          <br />
+
+          <div className="button-wrapper">
+            <button
+              type="button"
+              className="add-button btn btn-outline-secondary"
+              onClick={this.gotoEvents}
+            >
+              Back to the list
+            </button>
+            <button type="submit" className="add-button btn btn-primary">
+              Add Event{" "}
+            </button>
+          </div>
+        </form>
       </React.Fragment>
     );
   }

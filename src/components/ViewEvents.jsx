@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import DisplayData from "./DisplayData";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default class ViewEvents extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class ViewEvents extends Component {
   render() {
     return (
       <React.Fragment>
-        <div>
+        <div className="event-content-container">
           When you're next wondering what to do and where to go in Auckland,
           there's always so much happening in Auckland’s city centre! Browse
           current and upcoming events, from concerts and gigs to spectacular
@@ -32,23 +33,21 @@ export default class ViewEvents extends Component {
         </div>
 
         <div>
-          <ul>
-            {console.log(this.state.artworks)}
-            {this.state.artworks.map((data, i) => {
-              return (
-                <DisplayData
-                  key={i}
-                  name={data.name}
-                  imagepath={data.imageUrl}
-                  author={data.author}
-                  url={data.url}
-                  uuid={data._id}
-                  removeEvent={this.removeEvent}
-                  refreshEvent={this.getData}
-                />
-              );
-            })}
-          </ul>
+          {console.log(this.state.artworks)}
+          {this.state.artworks.map((data, i) => {
+            return (
+              <DisplayData
+                key={i}
+                name={data.name}
+                imagepath={data.imageUrl}
+                author={data.author}
+                url={data.url}
+                uuid={data._id}
+                removeEvent={this.removeEvent}
+                refreshEvent={this.getData}
+              />
+            );
+          })}
         </div>
       </React.Fragment>
     );
